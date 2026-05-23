@@ -1,270 +1,964 @@
-PORTFOLIO — DATA ANALYTICS & ENGINEERING
-Hope Essien
-Data & AI Engineer at Morgan Stanley. Building intelligent automation, ML infrastructure, and data engineering systems in financial services. MSc Business Analytics, University of Stirling. Databricks Certified Data Engineer Professional.
-Python
-UiPath RPA
-Alteryx
-Power BI
-SQL
-R
-Machine Learning
-Data Engineering
-Databricks
-Apache Spark
-250+
-ANNUAL HOURS SAVED VIA AUTOMATION
-90%
-MANUAL EFFORT REDUCTION
-5+
-PRODUCTION SYSTEMS DEPLOYED
-01
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hope Essien — Data Analytics & Engineering Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #070b14;
+    --surface: #0d1526;
+    --surface2: #111d35;
+    --border: #1a2d50;
+    --border2: #243d6a;
+    --blue: #3b82f6;
+    --blue-dim: #1d4ed8;
+    --cyan: #06b6d4;
+    --green: #10b981;
+    --amber: #f59e0b;
+    --text: #e2e8f0;
+    --text2: #94a3b8;
+    --text3: #475569;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Syne', sans-serif;
+  }
 
-Projects
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-MORGAN STANLEY · ASSET SERVICES
-LIVE IN PRODUCTION
-Intellimatch Automation Pipeline
-End-to-end automation of the Intellimatch reconciliation process — replacing a high-volume daily manual workflow requiring cross-system data extraction, identifier assignment, and position reconciliation. Designed and deployed as a dual-tool UiPath + Alteryx pipeline, now live across multiple teams in the Asset Services department.
-UiPath extraction
-→
-Alteryx transform
-→
-CUSIP assignment
-→
-GLASS system feed
-→
-Reconciliation output
-TECHNICAL APPROACH
-	•	UiPath handles repetitive cross-system data extraction and input
-	•	Alteryx performs transformation, matching logic and reconciliation
-	•	Database-connected workflows — live data, not flat files
-	•	Exception handling and audit logging built into every step
-	•	UiPath triggers Alteryx flow — fully integrated pipeline
-DEPLOYMENT & ADOPTION
-	•	Submitted via Morgan Stanley UiPath Automation Hub
-	•	Status: Live in Production — Asset Services RTB
-	•	Cross-team rollout — onboarded multiple Asset Services teams
-	•	Created documentation and onboarding materials for adoption
-	•	Recognised with internal WoW Award for innovation impact
-UiPath RPA
-Alteryx Designer
-SQL Server
-Python
-GLASS System
-Process Automation
+  /* Grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-252 hours saved annually
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
 
-90% manual effort reduction
+  /* Header */
+  header {
+    padding: 60px 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
 
-Multi-team deployment
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
 
-Risk reduction verified
+  .header-left { flex: 1; min-width: 280px; }
 
-MORGAN STANLEY · ASSET SERVICES
-LIVE IN PRODUCTION
-Risk Analytics Dashboard — Corporate Actions & Fixed Income
-Designed and deployed a Power BI risk analytics dashboard covering corporate actions and fixed income operations. The dashboard consolidates position data, break analysis, and control metrics into a single operational view, supporting regulatory reporting requirements and strengthening oversight across the Asset Services function.
-TECHNICAL APPROACH
-	•	Power BI connected to live operational data sources
-	•	DAX measures for KPI calculation and risk scoring
-	•	Automated refresh — no manual data preparation
-	•	Drill-through views for break investigation
-	•	Designed for Front Office and Risk team consumption
-BUSINESS IMPACT
-	•	Replaced manual Excel-based reporting process
-	•	Supports regulatory reporting with structured data views
-	•	Enables root-cause analysis on recurring trade breaks
-	•	Used by Front Office, Trade Support and Risk teams
-	•	Improved operational oversight across asset classes
-Power BI
-DAX
-SQL
-Data Modelling
-Regulatory Reporting
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--blue);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
 
-Multi-team usage
+  .badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
 
-Regulatory compliance
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
 
-Real-time risk visibility
+  h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
 
-INDEPENDENT · OPEN SOURCE
-OPEN SOURCE · GITHUB
-Ops Reconciliation Monitor
-A Python-built automated trade and cash break detection pipeline with root-cause classification and priority scoring. Designed to replicate and generalise reconciliation problem-solving patterns from financial operations — making intelligent break detection accessible beyond proprietary enterprise systems.
-Raw trade data
-→
-Break detection
-→
-Root-cause classification
-→
-Priority scoring
-→
-Excel + Power BI output
-TECHNICAL STACK
-	•	Python — pandas, numpy, openpyxl, matplotlib
-	•	Modular pipeline: data generation → engine → reporting
-	•	Root-cause classifier — 8 break categories with logic rules
-	•	Priority scoring engine — High / Medium / Low by exposure
-	•	Power BI-ready CSV outputs for dashboard integration
-CLASSIFICATION LOGIC
-	•	Failed settlement detection
-	•	Large notional mismatch — duplicate identification
-	•	Price / quantity discrepancy flagging
-	•	FX conversion and rounding variance
-	•	Corporate action and income processing lag
-Python
-pandas
-numpy
-openpyxl
-matplotlib
-Data Pipeline
-Financial Operations
+  h1 span { color: var(--blue); }
 
-500 trade records processed
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+    max-width: 480px;
+  }
 
-8-category break classifier
+  .stack-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
 
-Publicly available View on GitHub →
+  .pill {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    background: var(--surface);
+  }
 
-UNIVERSITY OF STIRLING · MSC BUSINESS ANALYTICS
-ACADEMIC · DISTINCTION
-Digital Engine Room — Business Metrics Tracking & Analysis System
-MSc dissertation project building a comprehensive digital system for tracking, visualising, and analysing business financial health metrics. The project applied machine learning techniques, statistical modelling, and interactive data visualisation to transform raw financial data into actionable business intelligence.
-TECHNICAL APPROACH
-	•	Python for data ingestion, transformation and modelling
-	•	R for statistical analysis and validation
-	•	Machine learning models for financial health forecasting
-	•	Interactive visualisation layer for business metric dashboards
-	•	End-to-end pipeline from raw data to insight delivery
-ACADEMIC CONTEXT
-	•	Statistics with R — 90%, Distinction
-	•	Machine Learning — Merit
-	•	Digital Business & Data Technologies — 83%, Distinction
-	•	Business Analytics — Merit
-	•	MSc awarded with Merit — University of Stirling, 2024
-Python
-R
-Machine Learning
-Statistical Modelling
-Data Visualisation
-Business Intelligence
+  .pill.highlight { border-color: rgba(6,182,212,0.4); color: var(--cyan); background: rgba(6,182,212,0.05); }
 
-Statistics with R — 90%
+  .header-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 200px;
+  }
 
-Digital Business & Data — 83%
+  .stat-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    padding: 16px 20px;
+    border-radius: 4px;
+  }
 
-MSc with Merit
+  .stat-box.green { border-left-color: var(--green); }
+  .stat-box.amber { border-left-color: var(--amber); }
 
-THE RAD CONSULTING GROUP · DIGITAL PRODUCTS
-JUN 2023 – NOV 2023
-Analytics Infrastructure for Human-Centred Digital Products
-Data analytics work embedded within RAD Consulting's digital product development practice — designing and building analytics infrastructure to support human-centred product design. Work included scenario testing, trend forecasting, and data pipeline development to support strategic planning and product performance tracking.
-TECHNICAL DELIVERABLES
-	•	Interactive dashboards for operational and financial metrics
-	•	Scenario testing models for strategic planning
-	•	Data pipelines for cleaning, transforming raw datasets
-	•	Early risk detection analysis for business continuity
-	•	Insight-led recommendations to senior stakeholders
-CONTEXT
-	•	RAD Consulting — human-centred digital product studio
-	•	Analytics embedded directly into product development
-	•	Executive-level reporting and decision support
-	•	Improved data pipeline efficiency across client projects
-	•	Reduced manual data handling and processing time
-Power BI
-Advanced Excel
-Python
-Data Pipelines
-Statistical Analysis
-Product Analytics
+  .stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
 
-ACUMEN DIGITAL · PRODUCT-LED DIGITAL STUDIO
-NOV 2020 – DEC 2022
-ML Engineering & Analytics — Karla & Tendar Fintech Products
-Sole Data Scientist at Acumen Digital — a full-service digital product studio and venture partner. Solely responsible for all machine learning infrastructure, data engineering pipelines, and analytical systems across two proprietary fintech products: Karla (contactless payments platform, launched Nov 2022, TechCabal Top 10 African Fintechs 2025, $50K pitch winner) and Tendar (AI-powered lending platform, TechCabal Aug 2024). Built credit scoring engines, churn models, conversion prediction systems, and user behaviour analytics pipelines from the ground up.
-KARLA — CONTACTLESS PAYMENTS (LAUNCHED NOV 2022)
-	•	Built conversion prediction ML models — identifying which users would become active paying customers
-	•	Built customer churn models — identifying users at risk of disengaging before they did so
-	•	Designed end-to-end user behaviour analytics pipeline using Python and SQL
-	•	Power BI dashboards for real-time product intelligence — used by product team for launch decisions
-	•	ML findings presented to management — directly changed a product feature decision pre-launch
-TENDAR — AI LENDING PLATFORM (TECHCABAL AUG 2024)
-	•	Built credit scoring engine — ML models powering 100% of Tendar's lending decisions
-	•	Built loan default reduction models — risk stratification predicting borrower default before it occurred
-	•	Designed full data engineering pipeline — ingestion, transformation, validation, and output
-	•	Default models fed directly into Tendar's automated recovery system
-	•	Sole Data Scientist — complete lending intelligence capability built individually
-RECOGNITION & SUCCESS
-	•	Karla: TechCabal Top 10 African Fintechs to Watch 2025 — editorial selection
-	•	Karla: $50,000 pitch competition win at Smart Banking Summit — judged by COO, Nigerian Fintech Association
-	•	Tendar: TechCabal editorial coverage — credit scoring and recovery described as core platform features
-	•	EXCEPTIONAL performance rating — July 2021 — Acumen Digital's highest assessment, 8 months in
-ABOUT ACUMEN DIGITAL
-	•	Full-service digital product studio and venture partner — Lagos, Texas, Toronto
-	•	Designs, builds and scales digital platforms for startups and global businesses
-	•	Proprietary products: Karla (contactless payments) and Tendar (AI lending)
-	•	Independently covered by TechCabal, ThisDay, and CIO Africa
-Python
-Machine Learning
-SQL
-Power BI
-Credit Scoring
-Churn Modelling
-Predictive Analytics
-Data Pipelines
-pandas
-User Behaviour Analytics
+  .stat-box:nth-child(1) .stat-num { color: var(--blue); }
+  .stat-box.green .stat-num { color: var(--green); }
+  .stat-box.amber .stat-num { color: var(--amber); }
 
-Sole Data Scientist across 2 products
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 
-Karla: TechCabal Top 10 Fintechs 2025
+  /* Section */
+  section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  section:last-child { border-bottom: none; }
 
-Karla: $50K pitch competition win
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
 
-EXCEPTIONAL rating — 8 months in
-02
+  .section-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
 
-Technical Stack
+  .section-line { flex: 1; height: 1px; background: var(--border); }
 
-LANGUAGES
-Python
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
 
-SQL
+  /* Projects */
+  .projects { display: flex; flex-direction: column; gap: 28px; }
 
-R
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
 
-DAX
+  .project-card:hover { border-color: var(--border2); }
 
-AUTOMATION
-UiPath RPA
+  .project-header {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
 
-Alteryx
+  .project-accent {
+    width: 4px;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
 
-Workflow Design
+  .project-accent.green { background: var(--green); }
+  .project-accent.amber { background: var(--amber); }
+  .project-accent.cyan { background: var(--cyan); }
+  .project-accent.purple { background: #8b5cf6; }
 
-Process Mining
+  .project-body { padding: 28px 28px 28px 24px; flex: 1; }
 
-VISUALISATION
-Power BI
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
 
-matplotlib
+  .project-org {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text3);
+  }
 
-Google Analytics
+  .project-status {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 
-Excel (Advanced)
+  .status-live { background: rgba(16,185,129,0.1); color: var(--green); border: 1px solid rgba(16,185,129,0.3); }
+  .status-open { background: rgba(6,182,212,0.1); color: var(--cyan); border: 1px solid rgba(6,182,212,0.3); }
+  .status-academic { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.3); }
+  .status-consulting { background: rgba(139,92,246,0.1); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
 
-DATA ENGINEERING
-pandas
+  .project-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
 
-Data Pipelines
+  .project-desc {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
 
-Databricks
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
 
-Apache Spark
+  @media (max-width: 600px) { .project-grid { grid-template-columns: 1fr; } }
 
-ML (sklearn)
+  .project-section-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text3);
+    margin-bottom: 8px;
+  }
 
-Hope Essien · Data & AI Engineer · Glasgow, UK · nmaessien92@gmail.com
+  .project-points {
+    list-style: none;
+  }
+
+  .project-points li {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text2);
+    line-height: 1.7;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  .project-points li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+
+  .project-points.green li::before { color: var(--green); }
+  .project-points.amber li::before { color: var(--amber); }
+  .project-points.cyan li::before { color: var(--cyan); }
+  .project-points.purple li::before { color: #8b5cf6; }
+
+  .tech-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .tech-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text2);
+  }
+
+  .impact-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .impact-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 6px 12px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text);
+  }
+
+  .impact-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+
+  .impact-dot.green { background: var(--green); }
+  .impact-dot.amber { background: var(--amber); }
+  .impact-dot.cyan { background: var(--cyan); }
+
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--cyan);
+    text-decoration: none;
+    border: 1px solid rgba(6,182,212,0.3);
+    padding: 6px 14px;
+    border-radius: 3px;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+
+  .github-link:hover { background: rgba(6,182,212,0.08); }
+
+  /* Pipeline diagram */
+  .pipeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 16px 0;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .pipe-node {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 6px 12px;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 3px;
+    color: var(--text2);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .pipe-node.active { border-color: rgba(59,130,246,0.5); color: var(--blue); background: rgba(59,130,246,0.05); }
+  .pipe-node.green { border-color: rgba(16,185,129,0.5); color: var(--green); background: rgba(16,185,129,0.05); }
+
+  .pipe-arrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--border2);
+    padding: 0 4px;
+    flex-shrink: 0;
+  }
+
+  /* Skills section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .skill-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+  }
+
+  .skill-group-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text3);
+    margin-bottom: 14px;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .skill-name {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text2);
+  }
+
+  .skill-bar-wrap { width: 80px; height: 3px; background: var(--border); border-radius: 2px; }
+  .skill-bar { height: 100%; border-radius: 2px; background: var(--blue); }
+  .skill-bar.green { background: var(--green); }
+  .skill-bar.amber { background: var(--amber); }
+  .skill-bar.cyan { background: var(--cyan); }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+  }
+
+  .footer-text a { color: var(--blue); text-decoration: none; }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in:nth-child(1) { animation-delay: 0.1s; }
+  .fade-in:nth-child(2) { animation-delay: 0.2s; }
+  .fade-in:nth-child(3) { animation-delay: 0.3s; }
+  .fade-in:nth-child(4) { animation-delay: 0.4s; }
+  .fade-in:nth-child(5) { animation-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="badge">Portfolio — Data Analytics & Engineering</div>
+        <h1>Hope<br><span>Essien</span></h1>
+        <p class="subtitle">Data & AI Engineer at Morgan Stanley. Building intelligent automation, ML infrastructure, and data engineering systems in financial services. MSc Business Analytics, University of Stirling. Databricks Certified Data Engineer Professional.</p>
+        <div class="stack-pills">
+          <span class="pill highlight">Python</span>
+          <span class="pill highlight">UiPath RPA</span>
+          <span class="pill highlight">Alteryx</span>
+          <span class="pill highlight">Power BI</span>
+          <span class="pill">SQL</span>
+          <span class="pill">R</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Data Engineering</span>
+          <span class="pill">Databricks</span>
+          <span class="pill">Apache Spark</span>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="stat-box">
+          <div class="stat-num">250+</div>
+          <div class="stat-label">Annual hours saved via automation</div>
+        </div>
+        <div class="stat-box green">
+          <div class="stat-num">90%</div>
+          <div class="stat-label">Manual effort reduction</div>
+        </div>
+        <div class="stat-box amber">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Production systems deployed</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section>
+    <div class="section-header">
+      <span class="section-tag">01</span>
+      <div class="section-line"></div>
+      <h2>Projects</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects">
+
+      <!-- Project 1: IM Markup Automation -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-accent green"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-org">Morgan Stanley · Asset Services</span>
+              <span class="project-status status-live">Live in Production</span>
+            </div>
+            <div class="project-title">Intellimatch Automation Pipeline</div>
+            <p class="project-desc">End-to-end automation of the Intellimatch reconciliation process — replacing a high-volume daily manual workflow requiring cross-system data extraction, identifier assignment, and position reconciliation. Designed and deployed as a dual-tool UiPath + Alteryx pipeline, now live across multiple teams in the Asset Services department.</p>
+
+            <div class="pipeline">
+              <span class="pipe-node active">UiPath extraction</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node active">Alteryx transform</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node active">CUSIP assignment</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node active">GLASS system feed</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node green">Reconciliation output</span>
+            </div>
+
+            <div class="project-grid">
+              <div>
+                <div class="project-section-title">Technical approach</div>
+                <ul class="project-points green">
+                  <li>UiPath handles repetitive cross-system data extraction and input</li>
+                  <li>Alteryx performs transformation, matching logic and reconciliation</li>
+                  <li>Database-connected workflows — live data, not flat files</li>
+                  <li>Exception handling and audit logging built into every step</li>
+                  <li>UiPath triggers Alteryx flow — fully integrated pipeline</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">Deployment & adoption</div>
+                <ul class="project-points green">
+                  <li>Submitted via Morgan Stanley UiPath Automation Hub</li>
+                  <li>Status: Live in Production — Asset Services RTB</li>
+                  <li>Cross-team rollout — onboarded multiple Asset Services teams</li>
+                  <li>Created documentation and onboarding materials for adoption</li>
+                  <li>Recognised with internal WoW Award for innovation impact</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span class="tech-tag">UiPath RPA</span>
+              <span class="tech-tag">Alteryx Designer</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">GLASS System</span>
+              <span class="tech-tag">Process Automation</span>
+            </div>
+
+            <div class="impact-row">
+              <span class="impact-chip"><span class="impact-dot green"></span>252 hours saved annually</span>
+              <span class="impact-chip"><span class="impact-dot green"></span>90% manual effort reduction</span>
+              <span class="impact-chip"><span class="impact-dot green"></span>Multi-team deployment</span>
+              <span class="impact-chip"><span class="impact-dot green"></span>Risk reduction verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Risk Analytics Dashboard -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-accent"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-org">Morgan Stanley · Asset Services</span>
+              <span class="project-status status-live">Live in Production</span>
+            </div>
+            <div class="project-title">Risk Analytics Dashboard — Corporate Actions & Fixed Income</div>
+            <p class="project-desc">Designed and deployed a Power BI risk analytics dashboard covering corporate actions and fixed income operations. The dashboard consolidates position data, break analysis, and control metrics into a single operational view, supporting regulatory reporting requirements and strengthening oversight across the Asset Services function.</p>
+
+            <div class="project-grid">
+              <div>
+                <div class="project-section-title">Technical approach</div>
+                <ul class="project-points">
+                  <li>Power BI connected to live operational data sources</li>
+                  <li>DAX measures for KPI calculation and risk scoring</li>
+                  <li>Automated refresh — no manual data preparation</li>
+                  <li>Drill-through views for break investigation</li>
+                  <li>Designed for Front Office and Risk team consumption</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">Business impact</div>
+                <ul class="project-points">
+                  <li>Replaced manual Excel-based reporting process</li>
+                  <li>Supports regulatory reporting with structured data views</li>
+                  <li>Enables root-cause analysis on recurring trade breaks</li>
+                  <li>Used by Front Office, Trade Support and Risk teams</li>
+                  <li>Improved operational oversight across asset classes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">DAX</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Data Modelling</span>
+              <span class="tech-tag">Regulatory Reporting</span>
+            </div>
+
+            <div class="impact-row">
+              <span class="impact-chip"><span class="impact-dot"></span>Multi-team usage</span>
+              <span class="impact-chip"><span class="impact-dot"></span>Regulatory compliance</span>
+              <span class="impact-chip"><span class="impact-dot"></span>Real-time risk visibility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Ops Reconciliation Monitor -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-accent cyan"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-org">Independent · Open Source</span>
+              <span class="project-status status-open">Open Source · GitHub</span>
+            </div>
+            <div class="project-title">Ops Reconciliation Monitor</div>
+            <p class="project-desc">A Python-built automated trade and cash break detection pipeline with root-cause classification and priority scoring. Designed to replicate and generalise reconciliation problem-solving patterns from financial operations — making intelligent break detection accessible beyond proprietary enterprise systems.</p>
+
+            <div class="pipeline">
+              <span class="pipe-node active">Raw trade data</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node active">Break detection</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node active">Root-cause classification</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node active">Priority scoring</span>
+              <span class="pipe-arrow">→</span>
+              <span class="pipe-node green">Excel + Power BI output</span>
+            </div>
+
+            <div class="project-grid">
+              <div>
+                <div class="project-section-title">Technical stack</div>
+                <ul class="project-points cyan">
+                  <li>Python — pandas, numpy, openpyxl, matplotlib</li>
+                  <li>Modular pipeline: data generation → engine → reporting</li>
+                  <li>Root-cause classifier — 8 break categories with logic rules</li>
+                  <li>Priority scoring engine — High / Medium / Low by exposure</li>
+                  <li>Power BI-ready CSV outputs for dashboard integration</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">Classification logic</div>
+                <ul class="project-points cyan">
+                  <li>Failed settlement detection</li>
+                  <li>Large notional mismatch — duplicate identification</li>
+                  <li>Price / quantity discrepancy flagging</li>
+                  <li>FX conversion and rounding variance</li>
+                  <li>Corporate action and income processing lag</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">pandas</span>
+              <span class="tech-tag">numpy</span>
+              <span class="tech-tag">openpyxl</span>
+              <span class="tech-tag">matplotlib</span>
+              <span class="tech-tag">Data Pipeline</span>
+              <span class="tech-tag">Financial Operations</span>
+            </div>
+
+            <div class="impact-row">
+              <span class="impact-chip"><span class="impact-dot cyan"></span>500 trade records processed</span>
+              <span class="impact-chip"><span class="impact-dot cyan"></span>8-category break classifier</span>
+              <span class="impact-chip"><span class="impact-dot cyan"></span>Publicly available</span>
+            </div>
+
+            <a href="https://github.com/hopeessien/ops-reconciliation-monitor" class="github-link" target="_blank">
+              View on GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: MSc Dissertation -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-accent amber"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-org">University of Stirling · MSc Business Analytics</span>
+              <span class="project-status status-academic">Academic · Distinction</span>
+            </div>
+            <div class="project-title">Digital Engine Room — Business Metrics Tracking & Analysis System</div>
+            <p class="project-desc">MSc dissertation project building a comprehensive digital system for tracking, visualising, and analysing business financial health metrics. The project applied machine learning techniques, statistical modelling, and interactive data visualisation to transform raw financial data into actionable business intelligence.</p>
+
+            <div class="project-grid">
+              <div>
+                <div class="project-section-title">Technical approach</div>
+                <ul class="project-points amber">
+                  <li>Python for data ingestion, transformation and modelling</li>
+                  <li>R for statistical analysis and validation</li>
+                  <li>Machine learning models for financial health forecasting</li>
+                  <li>Interactive visualisation layer for business metric dashboards</li>
+                  <li>End-to-end pipeline from raw data to insight delivery</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">Academic context</div>
+                <ul class="project-points amber">
+                  <li>Statistics with R — 90%, Distinction</li>
+                  <li>Machine Learning — Merit</li>
+                  <li>Digital Business & Data Technologies — 83%, Distinction</li>
+                  <li>Business Analytics — Merit</li>
+                  <li>MSc awarded with Merit — University of Stirling, 2024</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">R</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Statistical Modelling</span>
+              <span class="tech-tag">Data Visualisation</span>
+              <span class="tech-tag">Business Intelligence</span>
+            </div>
+
+            <div class="impact-row">
+              <span class="impact-chip"><span class="impact-dot amber"></span>Statistics with R — 90%</span>
+              <span class="impact-chip"><span class="impact-dot amber"></span>Digital Business & Data — 83%</span>
+              <span class="impact-chip"><span class="impact-dot amber"></span>MSc with Merit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: RAD Consulting -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-accent purple"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-org">The RAD Consulting Group · Digital Products</span>
+              <span class="project-status status-consulting">Jun 2023 – Nov 2023</span>
+            </div>
+            <div class="project-title">Analytics Infrastructure for Human-Centred Digital Products</div>
+            <p class="project-desc">Data analytics work embedded within RAD Consulting's digital product development practice — designing and building analytics infrastructure to support human-centred product design. Work included scenario testing, trend forecasting, and data pipeline development to support strategic planning and product performance tracking.</p>
+
+            <div class="project-grid">
+              <div>
+                <div class="project-section-title">Technical deliverables</div>
+                <ul class="project-points purple">
+                  <li>Interactive dashboards for operational and financial metrics</li>
+                  <li>Scenario testing models for strategic planning</li>
+                  <li>Data pipelines for cleaning, transforming raw datasets</li>
+                  <li>Early risk detection analysis for business continuity</li>
+                  <li>Insight-led recommendations to senior stakeholders</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">Context</div>
+                <ul class="project-points purple">
+                  <li>RAD Consulting — human-centred digital product studio</li>
+                  <li>Analytics embedded directly into product development</li>
+                  <li>Executive-level reporting and decision support</li>
+                  <li>Improved data pipeline efficiency across client projects</li>
+                  <li>Reduced manual data handling and processing time</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Advanced Excel</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Pipelines</span>
+              <span class="tech-tag">Statistical Analysis</span>
+              <span class="tech-tag">Product Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Acumen Digital -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-accent" style="background: #8b5cf6;"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-org">Acumen Digital · Product-Led Digital Studio</span>
+              <span class="project-status" style="background:rgba(139,92,246,0.1);color:#a78bfa;border:1px solid rgba(139,92,246,0.3);">Nov 2020 – Dec 2022</span>
+            </div>
+            <div class="project-title">ML Engineering & Analytics — Karla & Tendar Fintech Products</div>
+            <p class="project-desc">Sole Data Scientist at Acumen Digital — a full-service digital product studio and venture partner. Solely responsible for all machine learning infrastructure, data engineering pipelines, and analytical systems across two proprietary fintech products: Karla (contactless payments platform, launched Nov 2022, TechCabal Top 10 African Fintechs 2025, $50K pitch winner) and Tendar (AI-powered lending platform, TechCabal Aug 2024). Built credit scoring engines, churn models, conversion prediction systems, and user behaviour analytics pipelines from the ground up.</p>
+
+            <div class="project-grid">
+              <div>
+                <div class="project-section-title">Karla — Contactless Payments (Launched Nov 2022)</div>
+                <ul class="project-points purple">
+                  <li>Built conversion prediction ML models — identifying which users would become active paying customers</li>
+                  <li>Built customer churn models — identifying users at risk of disengaging before they did so</li>
+                  <li>Designed end-to-end user behaviour analytics pipeline using Python and SQL</li>
+                  <li>Power BI dashboards for real-time product intelligence — used by product team for launch decisions</li>
+                  <li>ML findings presented to management — directly changed a product feature decision pre-launch</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">Tendar — AI Lending Platform (TechCabal Aug 2024)</div>
+                <ul class="project-points purple">
+                  <li>Built credit scoring engine — ML models powering 100% of Tendar's lending decisions</li>
+                  <li>Built loan default reduction models — risk stratification predicting borrower default before it occurred</li>
+                  <li>Designed full data engineering pipeline — ingestion, transformation, validation, and output</li>
+                  <li>Default models fed directly into Tendar's automated recovery system</li>
+                  <li>Sole Data Scientist — complete lending intelligence capability built individually</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-grid" style="margin-top: 0;">
+              <div>
+                <div class="project-section-title">Recognition & Success</div>
+                <ul class="project-points purple">
+                  <li>Karla: TechCabal Top 10 African Fintechs to Watch 2025 — editorial selection</li>
+                  <li>Karla: $50,000 pitch competition win at Smart Banking Summit — judged by COO, Nigerian Fintech Association</li>
+                  <li>Tendar: TechCabal editorial coverage — credit scoring and recovery described as core platform features</li>
+                  <li>EXCEPTIONAL performance rating — July 2021 — Acumen Digital's highest assessment, 8 months in</li>
+                </ul>
+              </div>
+              <div>
+                <div class="project-section-title">About Acumen Digital</div>
+                <ul class="project-points purple">
+                  <li>Full-service digital product studio and venture partner — Lagos, Texas, Toronto</li>
+                  <li>Designs, builds and scales digital platforms for startups and global businesses</li>
+                  <li>Proprietary products: Karla (contactless payments) and Tendar (AI lending)</li>
+                  <li>Independently covered by TechCabal, ThisDay, and CIO Africa</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Credit Scoring</span>
+              <span class="tech-tag">Churn Modelling</span>
+              <span class="tech-tag">Predictive Analytics</span>
+              <span class="tech-tag">Data Pipelines</span>
+              <span class="tech-tag">pandas</span>
+              <span class="tech-tag">User Behaviour Analytics</span>
+            </div>
+
+            <div class="impact-row">
+              <span class="impact-chip"><span class="impact-dot" style="background:#8b5cf6;"></span>Sole Data Scientist across 2 products</span>
+              <span class="impact-chip"><span class="impact-dot" style="background:#8b5cf6;"></span>Karla: TechCabal Top 10 Fintechs 2025</span>
+              <span class="impact-chip"><span class="impact-dot" style="background:#8b5cf6;"></span>Karla: $50K pitch competition win</span>
+              <span class="impact-chip"><span class="impact-dot" style="background:#8b5cf6;"></span>EXCEPTIONAL rating — 8 months in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <div class="section-header">
+      <span class="section-tag">02</span>
+      <div class="section-line"></div>
+      <h2>Technical Stack</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar-wrap"><div class="skill-bar green" style="width:88%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">SQL</span><div class="skill-bar-wrap"><div class="skill-bar green" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">R</span><div class="skill-bar-wrap"><div class="skill-bar green" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">DAX</span><div class="skill-bar-wrap"><div class="skill-bar green" style="width:82%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Automation</div>
+        <div class="skill-item"><span class="skill-name">UiPath RPA</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Alteryx</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Workflow Design</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Process Mining</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Visualisation</div>
+        <div class="skill-item"><span class="skill-name">Power BI</span><div class="skill-bar-wrap"><div class="skill-bar amber" style="width:92%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">matplotlib</span><div class="skill-bar-wrap"><div class="skill-bar amber" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Google Analytics</span><div class="skill-bar-wrap"><div class="skill-bar amber" style="width:75%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Excel (Advanced)</span><div class="skill-bar-wrap"><div class="skill-bar amber" style="width:90%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Data Engineering</div>
+        <div class="skill-item"><span class="skill-name">pandas</span><div class="skill-bar-wrap"><div class="skill-bar cyan" style="width:88%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Data Pipelines</span><div class="skill-bar-wrap"><div class="skill-bar cyan" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Databricks</span><div class="skill-bar-wrap"><div class="skill-bar cyan" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Apache Spark</span><div class="skill-bar-wrap"><div class="skill-bar cyan" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">ML (sklearn)</span><div class="skill-bar-wrap"><div class="skill-bar cyan" style="width:80%"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">Hope Essien · Data & AI Engineer · Glasgow, UK · <a href="mailto:nmaessien92@gmail.com">nmaessien92@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
