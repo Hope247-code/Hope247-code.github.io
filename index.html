@@ -1,559 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hope Essien — Data Analytics Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --surface: #111118;
-      --border: #1e1e2e;
-      --accent: #00e5a0;
-      --accent2: #7c6af7;
-      --accent3: #f7c26a;
-      --text: #e8e8f0;
-      --muted: #6b6b80;
-      --card: #13131c;
-    }
+PORTFOLIO — DATA ANALYTICS & ENGINEERING
+Hope Essien
+Data & AI Engineer at Morgan Stanley. Building intelligent automation, ML infrastructure, and data engineering systems in financial services. MSc Business Analytics, University of Stirling. Databricks Certified Data Engineer Professional.
+Python
+UiPath RPA
+Alteryx
+Power BI
+SQL
+R
+Machine Learning
+Data Engineering
+Databricks
+Apache Spark
+250+
+ANNUAL HOURS SAVED VIA AUTOMATION
+90%
+MANUAL EFFORT REDUCTION
+5+
+PRODUCTION SYSTEMS DEPLOYED
+01
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+Projects
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Mono', monospace;
-      font-size: 14px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
 
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 0;
-    }
+MORGAN STANLEY · ASSET SERVICES
+LIVE IN PRODUCTION
+Intellimatch Automation Pipeline
+End-to-end automation of the Intellimatch reconciliation process — replacing a high-volume daily manual workflow requiring cross-system data extraction, identifier assignment, and position reconciliation. Designed and deployed as a dual-tool UiPath + Alteryx pipeline, now live across multiple teams in the Asset Services department.
+UiPath extraction
+→
+Alteryx transform
+→
+CUSIP assignment
+→
+GLASS system feed
+→
+Reconciliation output
+TECHNICAL APPROACH
+	•	UiPath handles repetitive cross-system data extraction and input
+	•	Alteryx performs transformation, matching logic and reconciliation
+	•	Database-connected workflows — live data, not flat files
+	•	Exception handling and audit logging built into every step
+	•	UiPath triggers Alteryx flow — fully integrated pipeline
+DEPLOYMENT & ADOPTION
+	•	Submitted via Morgan Stanley UiPath Automation Hub
+	•	Status: Live in Production — Asset Services RTB
+	•	Cross-team rollout — onboarded multiple Asset Services teams
+	•	Created documentation and onboarding materials for adoption
+	•	Recognised with internal WoW Award for innovation impact
+UiPath RPA
+Alteryx Designer
+SQL Server
+Python
+GLASS System
+Process Automation
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 48px;
-      background: rgba(10,10,15,0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: -0.5px; color: var(--accent); }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
+252 hours saved annually
 
-    /* HERO */
-    .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 48px 80px; position: relative; }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(0,229,160,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,160,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
-    }
-    .hero-glow {
-      position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%);
-      top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
-    }
-    .hero-content { position: relative; z-index: 1; max-width: 820px; }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.3);
-      color: var(--accent); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-      padding: 6px 14px; border-radius: 2px; margin-bottom: 28px;
-      animation: fadeUp 0.6s ease both;
-    }
-    .hero h1 {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(48px, 7vw, 84px); line-height: 1.0;
-      letter-spacing: -3px; margin-bottom: 28px;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero-sub {
-      font-size: 15px; color: var(--muted); max-width: 580px;
-      line-height: 1.8; margin-bottom: 36px;
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
-    .hero-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; animation: fadeUp 0.6s 0.25s ease both; }
-    .hero-meta-item { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
-    .hero-meta-item .dot { color: var(--accent); }
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
-    .btn-primary {
-      background: var(--accent); color: #000; padding: 12px 28px;
-      font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase; border: none; cursor: pointer;
-      text-decoration: none; display: inline-block; transition: opacity 0.2s, transform 0.2s;
-    }
-    .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent; color: var(--text); padding: 12px 28px;
-      font-family: 'DM Mono', monospace; font-size: 12px;
-      letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--border);
-      cursor: pointer; text-decoration: none; display: inline-block;
-      transition: border-color 0.2s, color 0.2s, transform 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+90% manual effort reduction
 
-    /* STATS */
-    .stats-bar {
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      display: grid; grid-template-columns: repeat(4,1fr); background: var(--surface);
-    }
-    .stat-item { padding: 32px 40px; border-right: 1px solid var(--border); }
-    .stat-item:last-child { border-right: none; }
-    .stat-num { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: var(--accent); letter-spacing: -1px; }
-    .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+Multi-team deployment
 
-    /* SECTION */
-    section { padding: 100px 48px; position: relative; }
-    .section-header { margin-bottom: 64px; }
-    .section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
-    .section-title { font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 48px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; }
-    .section-title em { font-style: normal; color: var(--muted); }
+Risk reduction verified
 
-    /* SKILLS */
-    .skills-section { background: var(--surface); }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; }
-    .skill-card {
-      background: var(--card); padding: 36px 32px; border: 1px solid var(--border);
-      transition: border-color 0.3s, transform 0.3s; cursor: default; position: relative; overflow: hidden;
-    }
-    .skill-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--card-accent, var(--accent)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
-    }
-    .skill-card:hover { border-color: var(--card-accent, var(--accent)); transform: translateY(-2px); }
-    .skill-card:hover::before { transform: scaleX(1); }
-    .skill-icon { font-size: 26px; margin-bottom: 16px; }
-    .skill-name { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 10px; }
-    .skill-desc { color: var(--muted); font-size: 13px; line-height: 1.7; margin-bottom: 18px; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .skill-tag { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--border); color: var(--muted); border-radius: 2px; }
-    .bar-wrap { margin-top: 20px; }
-    .bar-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 6px; }
-    .bar-track { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 2px; background: var(--card-accent, var(--accent)); width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+MORGAN STANLEY · ASSET SERVICES
+LIVE IN PRODUCTION
+Risk Analytics Dashboard — Corporate Actions & Fixed Income
+Designed and deployed a Power BI risk analytics dashboard covering corporate actions and fixed income operations. The dashboard consolidates position data, break analysis, and control metrics into a single operational view, supporting regulatory reporting requirements and strengthening oversight across the Asset Services function.
+TECHNICAL APPROACH
+	•	Power BI connected to live operational data sources
+	•	DAX measures for KPI calculation and risk scoring
+	•	Automated refresh — no manual data preparation
+	•	Drill-through views for break investigation
+	•	Designed for Front Office and Risk team consumption
+BUSINESS IMPACT
+	•	Replaced manual Excel-based reporting process
+	•	Supports regulatory reporting with structured data views
+	•	Enables root-cause analysis on recurring trade breaks
+	•	Used by Front Office, Trade Support and Risk teams
+	•	Improved operational oversight across asset classes
+Power BI
+DAX
+SQL
+Data Modelling
+Regulatory Reporting
 
-    /* HIGHLIGHTS */
-    .highlights-section { background: var(--bg); }
-    .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2px; }
-    .highlight-card {
-      background: var(--card); border: 1px solid var(--border); padding: 40px 36px;
-      transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden;
-    }
-    .highlight-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
-    .highlight-num {
-      font-family: 'Syne', sans-serif; font-size: 72px; font-weight: 800;
-      color: rgba(255,255,255,0.025); position: absolute; top: 18px; right: 26px; line-height: 1; user-select: none;
-    }
-    .highlight-badge {
-      display: inline-block; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 4px 10px; border-radius: 2px; margin-bottom: 18px;
-    }
-    .badge-auto { background: rgba(0,229,160,0.1); color: var(--accent); border: 1px solid rgba(0,229,160,0.3); }
-    .badge-viz  { background: rgba(247,194,106,0.1); color: var(--accent3); border: 1px solid rgba(247,194,106,0.3); }
-    .badge-risk { background: rgba(124,106,247,0.15); color: var(--accent2); border: 1px solid rgba(124,106,247,0.3); }
-    .badge-pipe { background: rgba(0,229,160,0.1); color: var(--accent); border: 1px solid rgba(0,229,160,0.3); }
-    .badge-prod { background: rgba(124,106,247,0.15); color: var(--accent2); border: 1px solid rgba(124,106,247,0.3); }
-    .badge-fcast { background: rgba(247,106,106,0.1); color: #f76a6a; border: 1px solid rgba(247,106,106,0.3); }
-    .highlight-title { font-family: 'Syne', sans-serif; font-size: 21px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.3px; }
-    .highlight-desc { color: var(--muted); font-size: 13px; line-height: 1.8; margin-bottom: 24px; }
-    .highlight-metrics { display: flex; gap: 24px; margin-bottom: 24px; padding-top: 18px; border-top: 1px solid var(--border); }
-    .metric-val { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--accent); }
-    .metric-label { font-size: 11px; color: var(--muted); }
-    .tool-chips { display: flex; gap: 6px; flex-wrap: wrap; }
-    .tool-chip { font-size: 10px; letter-spacing: 0.06em; padding: 3px 9px; border: 1px solid var(--border); color: var(--muted); border-radius: 2px; }
+Multi-team usage
 
-    /* EXPERIENCE */
-    .experience-section { background: var(--surface); }
-    .timeline { position: relative; }
-    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--accent), transparent); }
-    .timeline-item { padding: 0 0 52px 40px; position: relative; }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-item::before { content: ''; position: absolute; left: -4px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
-    .timeline-date { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
-    .timeline-role { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2px; }
-    .timeline-company { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
-    .timeline-desc { color: var(--muted); font-size: 13px; line-height: 1.8; max-width: 700px; }
-    .timeline-desc li { margin-bottom: 5px; padding-left: 4px; }
+Regulatory compliance
 
-    /* CREDENTIALS */
-    .creds-section { background: var(--bg); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
-    .cred-block { background: var(--card); border: 1px solid var(--border); padding: 40px 36px; }
-    .block-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 28px; color: var(--accent); letter-spacing: 0.02em; text-transform: uppercase; }
-    .cred-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
-    .cred-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .cred-name { font-size: 13px; font-family: 'Syne', sans-serif; font-weight: 600; margin-bottom: 4px; }
-    .cred-body { color: var(--muted); font-size: 12px; line-height: 1.6; }
+Real-time risk visibility
 
-    /* CONTACT */
-    .contact-section { background: var(--surface); text-align: center; position: relative; overflow: hidden; }
-    .contact-glow { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(124,106,247,0.1) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
-    .contact-content { position: relative; z-index: 1; }
-    .contact-title { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -2px; margin-bottom: 16px; }
-    .contact-sub { color: var(--muted); font-size: 15px; margin-bottom: 44px; }
-    .contact-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .contact-link { display: flex; align-items: center; gap: 10px; padding: 14px 28px; border: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s, transform 0.2s; }
-    .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+INDEPENDENT · OPEN SOURCE
+OPEN SOURCE · GITHUB
+Ops Reconciliation Monitor
+A Python-built automated trade and cash break detection pipeline with root-cause classification and priority scoring. Designed to replicate and generalise reconciliation problem-solving patterns from financial operations — making intelligent break detection accessible beyond proprietary enterprise systems.
+Raw trade data
+→
+Break detection
+→
+Root-cause classification
+→
+Priority scoring
+→
+Excel + Power BI output
+TECHNICAL STACK
+	•	Python — pandas, numpy, openpyxl, matplotlib
+	•	Modular pipeline: data generation → engine → reporting
+	•	Root-cause classifier — 8 break categories with logic rules
+	•	Priority scoring engine — High / Medium / Low by exposure
+	•	Power BI-ready CSV outputs for dashboard integration
+CLASSIFICATION LOGIC
+	•	Failed settlement detection
+	•	Large notional mismatch — duplicate identification
+	•	Price / quantity discrepancy flagging
+	•	FX conversion and rounding variance
+	•	Corporate action and income processing lag
+Python
+pandas
+numpy
+openpyxl
+matplotlib
+Data Pipeline
+Financial Operations
 
-    /* FOOTER */
-    footer { background: var(--card); border-top: 1px solid var(--border); padding: 28px 48px; display: flex; justify-content: space-between; align-items: center; }
-    footer span { color: var(--muted); font-size: 12px; }
+500 trade records processed
 
-    /* ANIM */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+8-category break classifier
 
-    @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: none; }
-      .hero { padding: 100px 24px 60px; }
-      section { padding: 72px 24px; }
-      .stats-bar { grid-template-columns: repeat(2,1fr); }
-      .stat-item { padding: 24px; }
-      .two-col { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 8px; text-align: center; }
-    }
-  </style>
-</head>
-<body>
+Publicly available View on GitHub →
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Hope Essien</div>
-  <div class="nav-links">
-    <a href="#skills">Skills</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#experience">Experience</a>
-    <a href="#credentials">Credentials</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+UNIVERSITY OF STIRLING · MSC BUSINESS ANALYTICS
+ACADEMIC · DISTINCTION
+Digital Engine Room — Business Metrics Tracking & Analysis System
+MSc dissertation project building a comprehensive digital system for tracking, visualising, and analysing business financial health metrics. The project applied machine learning techniques, statistical modelling, and interactive data visualisation to transform raw financial data into actionable business intelligence.
+TECHNICAL APPROACH
+	•	Python for data ingestion, transformation and modelling
+	•	R for statistical analysis and validation
+	•	Machine learning models for financial health forecasting
+	•	Interactive visualisation layer for business metric dashboards
+	•	End-to-end pipeline from raw data to insight delivery
+ACADEMIC CONTEXT
+	•	Statistics with R — 90%, Distinction
+	•	Machine Learning — Merit
+	•	Digital Business & Data Technologies — 83%, Distinction
+	•	Business Analytics — Merit
+	•	MSc awarded with Merit — University of Stirling, 2024
+Python
+R
+Machine Learning
+Statistical Modelling
+Data Visualisation
+Business Intelligence
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-tag">Operations Data Analyst · Morgan Stanley</div>
-    <h1>Hope<br/>Essien<span>.</span></h1>
-    <p class="hero-sub">
-      Data analyst with 5+ years delivering automation-led transformation, risk analytics, and insight infrastructure.
-      Specialist in Power BI, SQL, Alteryx, and UiPath RPA — with a track record of 250+ hours in annual capacity savings
-      and dashboards used at the highest levels of financial operations.
-    </p>
-    <div class="hero-meta">
-      <div class="hero-meta-item"><span class="dot">◆</span><span>Glasgow, United Kingdom</span></div>
-      <div class="hero-meta-item"><span class="dot">◆</span><span>MSc Business Analytics · University of Stirling</span></div>
-      <div class="hero-meta-item"><span class="dot">◆</span><span>SSBO Win of the Week · Morgan Stanley</span></div>
-    </div>
-    <div class="hero-ctas">
-      <a href="#highlights" class="btn-primary">View Highlights</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
-    </div>
-  </div>
-</section>
+Statistics with R — 90%
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item reveal"><div class="stat-num">5+</div><div class="stat-label">Years in Analytics</div></div>
-  <div class="stat-item reveal"><div class="stat-num">250+</div><div class="stat-label">Annual Hours Saved</div></div>
-  <div class="stat-item reveal"><div class="stat-num">90%</div><div class="stat-label">Manual Effort Cut</div></div>
-  <div class="stat-item reveal"><div class="stat-num">3</div><div class="stat-label">Certifications</div></div>
-</div>
+Digital Business & Data — 83%
 
-<!-- SKILLS -->
-<section class="skills-section" id="skills">
-  <div class="section-header reveal">
-    <div class="section-label">// 01 — Toolkit</div>
-    <h2 class="section-title">What I work <em>with</em></h2>
-  </div>
-  <div class="skills-grid">
+MSc with Merit
 
-    <div class="skill-card reveal" style="--card-accent:#f7c26a">
-      <div class="skill-icon">📊</div>
-      <div class="skill-name">Power BI & Excel</div>
-      <div class="skill-desc">Interactive dashboards, DAX measures, Power Query pipelines, KPI design, and executive-grade regulatory reporting. Microsoft PL-300 certified.</div>
-      <div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">DAX</span><span class="skill-tag">Power Query</span><span class="skill-tag">Advanced Excel</span></div>
-      <div class="bar-wrap"><div class="bar-label"><span>Proficiency</span><span>95%</span></div><div class="bar-track"><div class="bar-fill" data-width="95"></div></div></div>
-    </div>
+THE RAD CONSULTING GROUP · DIGITAL PRODUCTS
+JUN 2023 – NOV 2023
+Analytics Infrastructure for Human-Centred Digital Products
+Data analytics work embedded within RAD Consulting's digital product development practice — designing and building analytics infrastructure to support human-centred product design. Work included scenario testing, trend forecasting, and data pipeline development to support strategic planning and product performance tracking.
+TECHNICAL DELIVERABLES
+	•	Interactive dashboards for operational and financial metrics
+	•	Scenario testing models for strategic planning
+	•	Data pipelines for cleaning, transforming raw datasets
+	•	Early risk detection analysis for business continuity
+	•	Insight-led recommendations to senior stakeholders
+CONTEXT
+	•	RAD Consulting — human-centred digital product studio
+	•	Analytics embedded directly into product development
+	•	Executive-level reporting and decision support
+	•	Improved data pipeline efficiency across client projects
+	•	Reduced manual data handling and processing time
+Power BI
+Advanced Excel
+Python
+Data Pipelines
+Statistical Analysis
+Product Analytics
 
-    <div class="skill-card reveal" style="--card-accent:#00e5a0">
-      <div class="skill-icon">🗄️</div>
-      <div class="skill-name">SQL & Data Modelling</div>
-      <div class="skill-desc">Complex queries, data validation, quality frameworks, and modelling for operational and financial reporting pipelines across multiple platforms.</div>
-      <div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">Data Modelling</span><span class="skill-tag">Data Quality</span><span class="skill-tag">Validation</span></div>
-      <div class="bar-wrap"><div class="bar-label"><span>Proficiency</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
-    </div>
+ACUMEN DIGITAL · PRODUCT-LED DIGITAL STUDIO
+NOV 2020 – DEC 2022
+ML Engineering & Analytics — Karla & Tendar Fintech Products
+Sole Data Scientist at Acumen Digital — a full-service digital product studio and venture partner. Solely responsible for all machine learning infrastructure, data engineering pipelines, and analytical systems across two proprietary fintech products: Karla (contactless payments platform, launched Nov 2022, TechCabal Top 10 African Fintechs 2025, $50K pitch winner) and Tendar (AI-powered lending platform, TechCabal Aug 2024). Built credit scoring engines, churn models, conversion prediction systems, and user behaviour analytics pipelines from the ground up.
+KARLA — CONTACTLESS PAYMENTS (LAUNCHED NOV 2022)
+	•	Built conversion prediction ML models — identifying which users would become active paying customers
+	•	Built customer churn models — identifying users at risk of disengaging before they did so
+	•	Designed end-to-end user behaviour analytics pipeline using Python and SQL
+	•	Power BI dashboards for real-time product intelligence — used by product team for launch decisions
+	•	ML findings presented to management — directly changed a product feature decision pre-launch
+TENDAR — AI LENDING PLATFORM (TECHCABAL AUG 2024)
+	•	Built credit scoring engine — ML models powering 100% of Tendar's lending decisions
+	•	Built loan default reduction models — risk stratification predicting borrower default before it occurred
+	•	Designed full data engineering pipeline — ingestion, transformation, validation, and output
+	•	Default models fed directly into Tendar's automated recovery system
+	•	Sole Data Scientist — complete lending intelligence capability built individually
+RECOGNITION & SUCCESS
+	•	Karla: TechCabal Top 10 African Fintechs to Watch 2025 — editorial selection
+	•	Karla: $50,000 pitch competition win at Smart Banking Summit — judged by COO, Nigerian Fintech Association
+	•	Tendar: TechCabal editorial coverage — credit scoring and recovery described as core platform features
+	•	EXCEPTIONAL performance rating — July 2021 — Acumen Digital's highest assessment, 8 months in
+ABOUT ACUMEN DIGITAL
+	•	Full-service digital product studio and venture partner — Lagos, Texas, Toronto
+	•	Designs, builds and scales digital platforms for startups and global businesses
+	•	Proprietary products: Karla (contactless payments) and Tendar (AI lending)
+	•	Independently covered by TechCabal, ThisDay, and CIO Africa
+Python
+Machine Learning
+SQL
+Power BI
+Credit Scoring
+Churn Modelling
+Predictive Analytics
+Data Pipelines
+pandas
+User Behaviour Analytics
 
-    <div class="skill-card reveal" style="--card-accent:#7c6af7">
-      <div class="skill-icon">⚙️</div>
-      <div class="skill-name">Alteryx & UiPath RPA</div>
-      <div class="skill-desc">End-to-end automation design and delivery replacing high-volume manual workflows. Alteryx Designer Core and UiPath RPA Developer Foundation certified.</div>
-      <div class="skill-tags"><span class="skill-tag">Alteryx Designer</span><span class="skill-tag">UiPath RPA</span><span class="skill-tag">Workflow Optimisation</span></div>
-      <div class="bar-wrap"><div class="bar-label"><span>Proficiency</span><span>92%</span></div><div class="bar-track"><div class="bar-fill" data-width="92"></div></div></div>
-    </div>
+Sole Data Scientist across 2 products
 
-    <div class="skill-card reveal" style="--card-accent:#f76a6a">
-      <div class="skill-icon">🔍</div>
-      <div class="skill-name">Governance & Risk Reporting</div>
-      <div class="skill-desc">Root cause analysis, requirements definition, risk & control reporting, and regulatory management reporting within financial services environments.</div>
-      <div class="skill-tags"><span class="skill-tag">Root Cause Analysis</span><span class="skill-tag">Risk Reporting</span><span class="skill-tag">KPI Design</span><span class="skill-tag">Regulatory</span></div>
-      <div class="bar-wrap"><div class="bar-label"><span>Proficiency</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" data-width="88"></div></div></div>
-    </div>
+Karla: TechCabal Top 10 Fintechs 2025
 
-    <div class="skill-card reveal" style="--card-accent:#6af7d0">
-      <div class="skill-icon">🤝</div>
-      <div class="skill-name">Delivery & Stakeholder Management</div>
-      <div class="skill-desc">Agile and Waterfall delivery across Front Office, Technology, and Product. Strong technical documentation, knowledge transfer, and cross-team coordination.</div>
-      <div class="skill-tags"><span class="skill-tag">Agile</span><span class="skill-tag">Waterfall</span><span class="skill-tag">Stakeholder Mgmt</span><span class="skill-tag">Documentation</span></div>
-      <div class="bar-wrap"><div class="bar-label"><span>Proficiency</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
-    </div>
+Karla: $50K pitch competition win
 
-  </div>
-</section>
+EXCEPTIONAL rating — 8 months in
+02
 
-<!-- HIGHLIGHTS -->
-<section class="highlights-section" id="highlights">
-  <div class="section-header reveal">
-    <div class="section-label">// 02 — Impact</div>
-    <h2 class="section-title">Key <em>highlights</em></h2>
-  </div>
-  <div class="highlights-grid">
+Technical Stack
 
-    <div class="highlight-card reveal">
-      <div class="highlight-num">01</div>
-      <span class="highlight-badge badge-auto">Automation · Morgan Stanley</span>
-      <h3 class="highlight-title">Automation Programme Delivery</h3>
-      <p class="highlight-desc">Identified, designed, and led delivery of Alteryx and UiPath automation solutions replacing high-volume manual workflows across the Asset Services team — contributing to the team exceeding its 2025 automation target by Q2.</p>
-      <div class="highlight-metrics">
-        <div class="metric"><div class="metric-val">90%</div><div class="metric-label">Manual Effort Reduced</div></div>
-        <div class="metric"><div class="metric-val">250+</div><div class="metric-label">Hours Saved / Year</div></div>
-      </div>
-      <div class="tool-chips"><span class="tool-chip">Alteryx</span><span class="tool-chip">UiPath RPA</span><span class="tool-chip">SQL</span></div>
-    </div>
+LANGUAGES
+Python
 
-    <div class="highlight-card reveal">
-      <div class="highlight-num">02</div>
-      <span class="highlight-badge badge-viz">Dashboard · Morgan Stanley</span>
-      <h3 class="highlight-title">Risk Analytics Dashboard</h3>
-      <p class="highlight-desc">Designed and deployed a risk analytics dashboard covering corporate actions and fixed income, strengthening operational oversight and supporting regulatory reporting requirements across multiple business lines.</p>
-      <div class="highlight-metrics">
-        <div class="metric"><div class="metric-val">Corp. Actions</div><div class="metric-label">Asset Class 1</div></div>
-        <div class="metric"><div class="metric-val">Fixed Income</div><div class="metric-label">Asset Class 2</div></div>
-      </div>
-      <div class="tool-chips"><span class="tool-chip">Power BI</span><span class="tool-chip">SQL</span><span class="tool-chip">Data Modelling</span></div>
-    </div>
+SQL
 
-    <div class="highlight-card reveal">
-      <div class="highlight-num">03</div>
-      <span class="highlight-badge badge-risk">Risk Controls · Morgan Stanley</span>
-      <h3 class="highlight-title">Trade & Cash Break Root Cause Analysis</h3>
-      <p class="highlight-desc">Led root-cause analysis on recurring trade and cash breaks, implementing data-driven controls that reduced repeat incidents and improved operational resilience across the trade lifecycle.</p>
-      <div class="highlight-metrics">
-        <div class="metric"><div class="metric-val">↓ Breaks</div><div class="metric-label">Repeat Incidents</div></div>
-        <div class="metric"><div class="metric-val">↑ Integrity</div><div class="metric-label">Trade Lifecycle Data</div></div>
-      </div>
-      <div class="tool-chips"><span class="tool-chip">SQL</span><span class="tool-chip">Root Cause Analysis</span><span class="tool-chip">Excel</span></div>
-    </div>
+R
 
-    <div class="highlight-card reveal">
-      <div class="highlight-num">04</div>
-      <span class="highlight-badge badge-pipe">Pipelines · Acumen Digital</span>
-      <h3 class="highlight-title">Automated Data Pipelines</h3>
-      <p class="highlight-desc">Built automated pipelines for cleaning, transforming, and validating raw datasets across client engagements — improving data quality, reducing manual rework, and enabling consistent analytics delivery at scale.</p>
-      <div class="highlight-metrics">
-        <div class="metric"><div class="metric-val">↑ Quality</div><div class="metric-label">Data Reliability</div></div>
-        <div class="metric"><div class="metric-val">↓ Errors</div><div class="metric-label">Manual Rework</div></div>
-      </div>
-      <div class="tool-chips"><span class="tool-chip">Alteryx</span><span class="tool-chip">Power BI</span><span class="tool-chip">Excel</span></div>
-    </div>
+DAX
 
-    <div class="highlight-card reveal">
-      <div class="highlight-num">05</div>
-      <span class="highlight-badge badge-fcast">Forecasting · RAD Consulting</span>
-      <h3 class="highlight-title">Scenario Testing & Risk Detection</h3>
-      <p class="highlight-desc">Analysed complex datasets to support scenario testing, trend forecasting, and early risk detection for business-continuity and strategic planning. Delivered insight-led recommendations to mitigate revenue volatility.</p>
-      <div class="highlight-metrics">
-        <div class="metric"><div class="metric-val">Exec Level</div><div class="metric-label">Stakeholder Audience</div></div>
-        <div class="metric"><div class="metric-val">↓ Risk</div><div class="metric-label">Revenue Volatility</div></div>
-      </div>
-      <div class="tool-chips"><span class="tool-chip">SQL</span><span class="tool-chip">Excel</span><span class="tool-chip">Power BI</span></div>
-    </div>
+AUTOMATION
+UiPath RPA
 
-    <div class="highlight-card reveal">
-      <div class="highlight-num">06</div>
-      <span class="highlight-badge badge-prod">Product Analytics · Acumen Digital</span>
-      <h3 class="highlight-title">UX & Product Analytics Embedding</h3>
-      <p class="highlight-desc">Analysed user behaviour and product usage data to drive UX optimisation and feature prioritisation. Partnered with product managers, designers, and engineers to embed analytics directly into digital products.</p>
-      <div class="highlight-metrics">
-        <div class="metric"><div class="metric-val">Real-time</div><div class="metric-label">Performance Tracking</div></div>
-        <div class="metric"><div class="metric-val">UX</div><div class="metric-label">Feature Improvements</div></div>
-      </div>
-      <div class="tool-chips"><span class="tool-chip">Power BI</span><span class="tool-chip">Excel</span><span class="tool-chip">Data Modelling</span></div>
-    </div>
+Alteryx
 
-  </div>
-</section>
+Workflow Design
 
-<!-- EXPERIENCE -->
-<section class="experience-section" id="experience">
-  <div class="section-header reveal">
-    <div class="section-label">// 03 — History</div>
-    <h2 class="section-title">Where I've <em>worked</em></h2>
-  </div>
-  <div class="timeline">
+Process Mining
 
-    <div class="timeline-item reveal">
-      <div class="timeline-date">Aug 2024 — Present</div>
-      <div class="timeline-role">Operations Data Analyst</div>
-      <div class="timeline-company">Morgan Stanley · Glasgow, UK</div>
-      <ul class="timeline-desc">
-        <li>Led automation delivery using Alteryx and UiPath, reducing manual effort by 90% and saving 250+ hours annually — helping the Asset Services team exceed its 2025 automation target by Q2</li>
-        <li>Designed and deployed a risk analytics dashboard for corporate actions and fixed income, supporting regulatory reporting</li>
-        <li>Led root-cause analysis on trade and cash breaks, implementing data-driven controls to improve operational resilience</li>
-        <li>Collaborated with Front Office, Trade Support, Product, and Technology to resolve reconciliation and position discrepancies</li>
-        <li>Partnered with IT and change teams to validate system enhancements against governance and risk controls</li>
-        <li>Recognised with the internal SSBO Win of the Week award for automation-led innovation</li>
-      </ul>
-    </div>
+VISUALISATION
+Power BI
 
-    <div class="timeline-item reveal">
-      <div class="timeline-date">Jun 2023 — Sep 2023</div>
-      <div class="timeline-role">Data Analyst</div>
-      <div class="timeline-company">The RAD Consulting Group</div>
-      <ul class="timeline-desc">
-        <li>Analysed complex datasets for scenario testing, trend forecasting, and early risk detection</li>
-        <li>Resolved data integrity issues in raw datasets, improving reliability for executive-level reporting</li>
-        <li>Designed interactive dashboards to enhance stakeholder visibility into operational and financial metrics</li>
-        <li>Delivered insight-led recommendations to senior stakeholders to mitigate revenue volatility and operational risk</li>
-      </ul>
-    </div>
+matplotlib
 
-    <div class="timeline-item reveal">
-      <div class="timeline-date">Mar 2020 — Dec 2022</div>
-      <div class="timeline-role">Data Analyst</div>
-      <div class="timeline-company">Acumen Digital</div>
-      <ul class="timeline-desc">
-        <li>Built automated data pipelines for cleaning, transforming, and validating raw datasets across client engagements</li>
-        <li>Designed reusable Power BI and Excel data models and reporting templates, accelerating client onboarding</li>
-        <li>Analysed user behaviour data to inform UX optimisation and product feature prioritisation</li>
-        <li>Standardised analytics delivery across projects, scaling reporting capability without increasing manual effort</li>
-        <li>Documented automated workflows and analytics logic to improve knowledge transfer across teams</li>
-      </ul>
-    </div>
+Google Analytics
 
-    <div class="timeline-item reveal">
-      <div class="timeline-date">Mar 2019 — Feb 2020</div>
-      <div class="timeline-role">Human Resources Officer</div>
-      <div class="timeline-company">Worldmark International GmbH Limited</div>
-      <ul class="timeline-desc">
-        <li>Led recruitment strategy revamp, improving candidate quality and early retention by 30%</li>
-        <li>Developed diversity initiatives that boosted minority representation by 25%</li>
-        <li>Rolled out engagement programmes tied to satisfaction metrics</li>
-      </ul>
-    </div>
+Excel (Advanced)
 
-  </div>
-</section>
+DATA ENGINEERING
+pandas
 
-<!-- CREDENTIALS -->
-<section class="creds-section" id="credentials">
-  <div class="section-header reveal">
-    <div class="section-label">// 04 — Credentials</div>
-    <h2 class="section-title">Certifications &amp; <em>education</em></h2>
-  </div>
-  <div class="two-col">
-    <div class="cred-block reveal">
-      <div class="block-title">Certifications & Recognition</div>
-      <div class="cred-item">
-        <div class="cred-name">Microsoft PL-300</div>
-        <div class="cred-body">Power BI Data Analyst Associate · Microsoft</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-name">Alteryx Designer Core</div>
-        <div class="cred-body">Certified · Alteryx</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-name">UiPath RPA Developer Foundation</div>
-        <div class="cred-body">Certified · UiPath</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-name">SSBO Win of the Week</div>
-        <div class="cred-body">Internal Award · Morgan Stanley — Recognised for automation-led innovation delivering measurable efficiency and risk-reduction</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-name">Mentor & Speaker</div>
-        <div class="cred-body">Kocha Mentors CIC (UK) — Mentoring early-career professionals at a UK professional development event</div>
-      </div>
-    </div>
-    <div class="cred-block reveal">
-      <div class="block-title">Education</div>
-      <div class="cred-item">
-        <div class="cred-name">MSc — Business Analytics</div>
-        <div class="cred-body">University of Stirling · United Kingdom · 2024</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-name">BSc — Management with Computing</div>
-        <div class="cred-body">Kwame Nkrumah University of Science and Technology · Ghana · 2017</div>
-      </div>
-    </div>
-  </div>
-</section>
+Data Pipelines
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-glow"></div>
-  <div class="contact-content reveal">
-    <div class="section-label">// 05 — Contact</div>
-    <h2 class="contact-title">Let's connect.</h2>
-    <p class="contact-sub">Open to senior analyst roles, consultancy engagements, and speaking opportunities.</p>
-    <div class="contact-links">
-      <a href="mailto:nmaessien92@gmail.com" class="contact-link"><span>✉</span>nmaessien92@gmail.com</a>
-      <a href="tel:+447308269411" class="contact-link"><span>📞</span>+44 7308 269411</a>
-      <a href="https://linkedin.com" class="contact-link" target="_blank"><span>in</span>LinkedIn</a>
-    </div>
-  </div>
-</section>
+Databricks
 
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 Hope Essien · Data Analytics Portfolio</span>
-  <span>Glasgow, United Kingdom</span>
-</footer>
+Apache Spark
 
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 60);
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+ML (sklearn)
 
-  const barObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.bar-fill').forEach(bar => { bar.style.width = bar.dataset.width + '%'; });
-        barObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.skill-card').forEach(card => barObserver.observe(card));
-</script>
-</body>
-</html>
+Hope Essien · Data & AI Engineer · Glasgow, UK · nmaessien92@gmail.com
